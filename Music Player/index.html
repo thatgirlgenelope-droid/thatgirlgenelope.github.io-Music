@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="Width=device-width, initial-scale=1.0">
+    <title> Genn's Music Player </title>
+    <link rel="stylesheet" href="script.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+</style>
+<script src="https://kit.fontawesome.com/0d4b052f2b.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+<div class="MusicContainer">
+    <div class="Music-Player">
+        <nav>
+            <div class="circle">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+             <div class="circle">
+                <i class="fa-solid fa-heart"></i>
+             </div>
+        </nav>
+        <div class="song-image-block">
+            <img src = "Songs/Lust_Thumbnail edit v3.jpg" class="Song_img" id="Song_Pic">
+            <span id="skipCenterIndicator" class="skip-center-indicator">+5</span>
+        </div>
+        <h1 id="Song_Title"> Lust</h1>
+        <p id="Song_Artist"> Marino, Alexandria</p>
+
+        <audio id="Song">
+            <source src="Songs/Music player Project_Songs_Marino_Alexandria_-_Lust_(mp3.pm).mp3.mp3" type="audio/mpeg">
+        </audio>
+        <input type="range" value="0" id="Progress_Bar">
+        <div class="controls">
+            <div onclick="skipBackward()"> <i class="fa-solid fa-backward"></i> </div>
+             <div onclick="playPause()"> <i class="fa-solid fa-play" id="ctrlIcon"></i> </div>
+             <div onclick="skipForward()"> <i class="fa-solid fa-forward"></i> </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"> </script>
+</body>
+</html>

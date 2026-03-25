@@ -1,0 +1,89 @@
+
+JAVASCRIPT ARRAYS TUTORIAL - Notes
+=====================================
+
+STEP 1: What's an array?
+-------------------------
+An array is a list that holds multiple items. You create it with square brackets []:
+
+Example:
+let fruits = ["apple", "banana", "orange"];
+
+
+STEP 2: Accessing items
+------------------------
+You access items by their position (starting at 0):
+
+fruits[0]  // "apple" (first item)
+fruits[1]  // "banana" (second item)
+fruits[2]  // "orange" (third item)
+
+
+STEP 3: Arrays can hold objects
+--------------------------------
+An object uses curly braces {} and holds related data:
+
+Example:
+let song = {
+    title: "Lust",
+    artist: "Marino",
+    file: "lust.mp3"
+};
+
+// Access properties with a dot:
+song.title    // "Lust"
+song.artist   // "Marino"
+
+
+STEP 4: Combine them - array of objects
+----------------------------------------
+Now put multiple song objects in an array:
+
+let songs = [
+    { title: "Lust", artist: "Marino", file: "lust.mp3" },
+    { title: "Puppet", artist: "John", file: "puppet.mp3" }
+];
+
+// Access them:
+songs[0].title   // "Lust"
+songs[1].artist  // "John"
+
+
+FOR YOUR MUSIC PLAYER:
+----------------------
+Create a songs array with your 3 songs. Each song object should have:
+- src (the file path)
+- title (song name)
+- artist (artist name)
+- img (thumbnail image path)
+
+Example structure:
+let songs = [
+    {
+        src: "Songs/song1.mp3",
+        title: "Song Title",
+        artist: "Artist Name",
+        img: "Songs/thumbnail.jpg"
+    },
+    // add more songs...
+];
+
+Place this array at the top of your script, right after declaring your variables.
+
+
+BONUS - The onended Problem:
+-----------------------------
+When you set Song.onended multiple times:
+
+Song.onended = function(){ /* first song */ }
+Song.onended = function(){ /* second song */ }
+
+The second one REPLACES the first one completely!
+
+SOLUTION: Use ONE onended function with a song counter:
+1. Keep track of which song you're on (use a variable like songIndex)
+2. Store all songs in an array of objects
+3. In the ONE onended function:
+   - Increase the song counter
+   - Load the next song's information
+   - Handle what happens when you reach the last song
